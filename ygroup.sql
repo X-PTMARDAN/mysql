@@ -1,11 +1,11 @@
-CREATE TABLE `CacheTable` (
+CREATE TABLE IF NOT EXISTS `CacheTable` (
   `ML_Key` varchar(255) DEFAULT NULL,
   `ML_Value` double DEFAULT NULL,
   `calendar_yearmonth` int(25) DEFAULT NULL
-) 
+);
 
 
-CREATE TABLE `Mapping` (
+CREATE TABLE IF NOT EXISTS `Mapping` (
   `SalesOrg` varchar(10) DEFAULT NULL,
   `material` int(10) DEFAULT NULL,
   `material_desc` varchar(25) DEFAULT NULL,
@@ -17,19 +17,19 @@ CREATE TABLE `Mapping` (
       `PAL` double(10,2) DEFAULT NULL,
         `CU` double(10,2) DEFAULT NULL,
   KEY `material_in` (`material`)
-) 
+);
 
 
 
-CREATE TABLE `UserLog` (
+CREATE TABLE IF NOT EXISTS `UserLog` (
   `Username` varchar(25) NOT NULL,
   `activity` varchar(25) NOT NULL,
   `datetimestamp` varchar(75) NOT NULL
-) 
+);
 
 
 
-CREATE TABLE `filter_data` (
+CREATE TABLE IF NOT EXISTS `filter_data` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(100) NOT NULL,
   `filter_name` varchar(100) NOT NULL,
@@ -38,21 +38,21 @@ CREATE TABLE `filter_data` (
   `sku` longtext NOT NULL,
   `valuedefault` varchar(25) DEFAULT NULL,
   PRIMARY KEY (`id`)
-)
+);
 
 
 
-CREATE TABLE `pipo_mapping_updated` (
+CREATE TABLE IF NOT EXISTS `pipo_mapping_updated` (
   `fromid` int(10) DEFAULT NULL,
   `toid` int(10) DEFAULT NULL,
   `fromweek` int(10) DEFAULT NULL,
   `fgid` varchar(75) DEFAULT NULL,
   `state` varchar(75) DEFAULT NULL
-) 
+);
 
 
 
-CREATE TABLE `pipo_final` (
+CREATE TABLE IF NOT EXISTS `pipo_final` (
   `material` varchar(10) DEFAULT NULL,
   `Sku` varchar(75) DEFAULT NULL,
   `Forecastinggroup` varchar(100) DEFAULT NULL,
@@ -60,13 +60,13 @@ CREATE TABLE `pipo_final` (
   `minimum` int(30) DEFAULT NULL,
   `maximum` int(30) DEFAULT NULL,
   `prime` varchar(75) DEFAULT 'PRIMARY'
-) 
+);
 
 
 
 
 
-CREATE TABLE `plan_data` (
+CREATE TABLE IF NOT EXISTS `plan_data` (
   `Pk_Combination` varchar(255) NOT NULL,
   `Sku` varchar(255) NOT NULL,
   `cpg` varchar(255) NOT NULL,
@@ -84,14 +84,13 @@ CREATE TABLE `plan_data` (
   `id` int(30) DEFAULT NULL,
   `lockcell` varchar(5) DEFAULT NULL,
   `forecasting` varchar(75) DEFAULT NULL
-) 
+);
 
 
 
-CREATE TABLE `users` (
+CREATE TABLE IF NOT EXISTS `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(255) DEFAULT NULL,
   `horizon` int(30) DEFAULT NULL,
   PRIMARY KEY (`id`)
-)
-
+);
