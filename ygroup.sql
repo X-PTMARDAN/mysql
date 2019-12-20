@@ -5,20 +5,6 @@ CREATE TABLE `CacheTable` (
 ) 
 
 
-CREATE TABLE `Mapping` (
-  `SalesOrg` varchar(10) DEFAULT NULL,
-  `material` int(10) DEFAULT NULL,
-  `material_desc` varchar(25) DEFAULT NULL,
-  `base_unit_measure` varchar(5) DEFAULT NULL,
-  `hl` double(10,2) DEFAULT NULL,
-  `PC` double(5,1) DEFAULT NULL,
-  `BOT` double(10,2) DEFAULT NULL,
-    `PPU` double(10,2) DEFAULT NULL,
-      `PAL` double(10,2) DEFAULT NULL,
-        `CU` double(10,2) DEFAULT NULL,
-  KEY `material_in` (`material`)
-) 
-
 
 
 CREATE TABLE `UserLog` (
