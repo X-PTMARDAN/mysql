@@ -53,8 +53,13 @@ CREATE TABLE `sku_mapping` (
 CREATE TABLE `users` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `user` varchar(255) DEFAULT NULL,
+  `password` varchar(255) DEFAULT NULL,
   `horizon` int(30) DEFAULT NULL,
-  `region` int(30) DEFAULT NULL,
+  `region` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
 );
 
+
+
+
+INSERT INTO users VALUES(1,"admin@gmail.com","admin",201803,"CH");
