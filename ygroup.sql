@@ -94,6 +94,6 @@ CREATE TABLE `plan_data` (
 );
 
 
-INSERT into filter_data(1,'admin','Default','G07 - CH Coop,G09 - CH Denner SD','G001 - Rheinfelden','10075-Bilz PanachÃ© CAN 24X0_33 TraN,10107-Bilz PanachÃ© BOT 10X0_33 CarN,11026-Bilz PanachÃ© PET 4X6X0_50 TraN,15412-Bilz PanachÃ© CAN 4X6X0_33 TraN,19004-Bilz PanachÃ© BOT 300X0_33 1/4N Dol,20725-Bilz PanachÃ© BOT 300X0_33 1/4N','Default');
+INSERT into filter_data VALUES(1,'admin','Default','G07 - CH Coop,G09 - CH Denner SD','G001 - Rheinfelden','10075-Bilz PanachÃ© CAN 24X0_33 TraN,10107-Bilz PanachÃ© BOT 10X0_33 CarN,11026-Bilz PanachÃ© PET 4X6X0_50 TraN,15412-Bilz PanachÃ© CAN 4X6X0_33 TraN,19004-Bilz PanachÃ© BOT 300X0_33 1/4N Dol,20725-Bilz PanachÃ© BOT 300X0_33 1/4N','Default');
 
 INSERT INTO users VALUES(1,"admin@gmail.com","admin",201803,"CH");
