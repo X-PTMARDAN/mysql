@@ -1,11 +1,17 @@
 
 
-DROP TABLE sku_mapping;
+DROP TABLE IF EXISTS sku_mapping;
 
-DROP TABLE pipo;
+DROP TABLE IF EXISTS pipo;
 
-DROP TABLE filters;
-DROP TABLE users;
+DROP TABLE IF EXISTS filters;
+DROP TABLE IF EXISTS users;
+
+
+DROP TABLE IF EXISTS plan_data;
+
+
+
 
 
 
@@ -61,5 +67,33 @@ CREATE TABLE `users` (
 
 
 
+
+CREATE TABLE `plan_data` (
+  `Pk_Combination` varchar(255) DEFAULT NULL,
+  `Sku` varchar(255) DEFAULT NULL,
+  `cpg` varchar(255) DEFAULT NULL,
+  `plant` varchar(255) DEFAULT NULL,
+  `Calendar_Week` int(11) DEFAULT NULL,
+  `fva` double DEFAULT NULL,
+  `Final_Forecast` double DEFAULT NULL,
+  `user` varchar(100) DEFAULT NULL,
+  `comments1` varchar(255) DEFAULT NULL,
+  `comments2` varchar(255) DEFAULT NULL,
+  `Temp_Value` tinyint(1) DEFAULT NULL,
+  `Final_Forecast_Temp` double DEFAULT NULL,
+  `calendar_yearmonth` int(25) DEFAULT NULL,
+  `ml` double(30,2) DEFAULT NULL,
+  `id` int(30) DEFAULT NULL,
+  `lockcell` varchar(5) DEFAULT NULL,
+  `forecasting` varchar(75) DEFAULT NULL,
+  `calendarWeek` int(11) DEFAULT NULL,
+  `finalForecast` varchar(255) DEFAULT NULL,
+  `finalForecastTemp` double DEFAULT NULL,
+  `tempValue` bit(1) DEFAULT NULL,
+  `forecast` varchar(255) DEFAULT NULL
+);
+
+
+INSERT into filter_data(1,'admin','Default','G07 - CH Coop,G09 - CH Denner SD','G001 - Rheinfelden','10075-Bilz PanachÃ© CAN 24X0_33 TraN,10107-Bilz PanachÃ© BOT 10X0_33 CarN,11026-Bilz PanachÃ© PET 4X6X0_50 TraN,15412-Bilz PanachÃ© CAN 4X6X0_33 TraN,19004-Bilz PanachÃ© BOT 300X0_33 1/4N Dol,20725-Bilz PanachÃ© BOT 300X0_33 1/4N','Default');
 
 INSERT INTO users VALUES(1,"admin@gmail.com","admin",201803,"CH");
